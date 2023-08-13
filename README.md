@@ -1,2 +1,0 @@
-# LearningDevLapisco
-Testando novas tecnologias.
