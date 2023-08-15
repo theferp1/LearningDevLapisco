@@ -30,7 +30,7 @@ const Login = () => {
                 setBlur(false);
               }
             }}
-            className="w-[266px] h-[55px] md:w-[366px] rounded-[20px] md:h-[65px] px-5 bg-[#3E3E3E]  bg-opacity-50 backdrop-blur-md placeholder-white text-white text-md md:text-xl font-medium focus:outline-none focus:ring-2 focus:ring-[#BCBCBC]"
+            className="w-[266px] h-[55px] md:w-[366px] rounded-[20px] md:h-[65px] px-5 bg-[#3E3E3E]  bg-opacity-[0.45] backdrop-blur-sm placeholder-white text-white text-md md:text-xl font-medium focus:outline-none focus:ring-2 focus:ring-[#BCBCBC]"
           />
           <input
             type="password"
@@ -47,7 +47,7 @@ const Login = () => {
                 setBlur(false);
               }
             }}
-            className="w-[266px] h-[55px] md:w-[366px] rounded-[20px] md:h-[65px] px-5 bg-[#3E3E3E] bg-opacity-50 backdrop-blur-md placeholder-white text-white text-md md:text-xl font-medium focus:outline-none focus:ring-2 focus:ring-[#BCBCBC]"
+            className="w-[266px] h-[55px] md:w-[366px] rounded-[20px] md:h-[65px] px-5 bg-[#3E3E3E] bg-opacity-[0.45] backdrop-blur-md placeholder-white text-white text-md md:text-xl font-medium focus:outline-none focus:ring-2 focus:ring-[#BCBCBC]"
           />
           <button className="text-md md:text-xl bg-white text-black font-bold w-fit px-7 md:px-12 hover:bg-slate-200 h-[50px] md:h-[65px] rounded-[20px]">
             Entrar
