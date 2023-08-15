@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Login = () => {
-  const [blur, setBlur] = useState(false);
+  const [blur, setBlur] = useState<boolean>(false);
 
   return (
     <div className="w-screen h-screen bg-slate-400 flex flex-col items-center justify-center ">
@@ -9,7 +9,7 @@ const Login = () => {
         <img
           src="/WhiteLapiscoLogo.svg"
           alt=""
-          className={` w-[170px] md:w-[250px]  focus:animate-spin `}
+          className={` w-[170px] md:w-[250px] select-none `}
         />
         <form
           action=""
@@ -49,7 +49,7 @@ const Login = () => {
             }}
             className="w-[266px] h-[55px] md:w-[366px] rounded-[20px] md:h-[65px] px-5 bg-[#3E3E3E] bg-opacity-[0.45] backdrop-blur-md placeholder-white text-white text-md md:text-xl font-medium focus:outline-none focus:ring-2 focus:ring-[#BCBCBC]"
           />
-          <button className="text-md md:text-xl bg-white text-black font-bold w-fit px-7 md:px-12 hover:bg-slate-200 h-[50px] md:h-[65px] rounded-[20px]">
+          <button className=" select-none text-md md:text-xl bg-white text-black font-bold w-fit px-7 md:px-12 hover:bg-slate-200 h-[50px] md:h-[65px] rounded-[20px]">
             Entrar
           </button>
         </form>
