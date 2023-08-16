@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion as m } from "framer-motion";
 
 const Login = () => {
   const [blur, setBlur] = useState<boolean>(false);
@@ -6,11 +7,17 @@ const Login = () => {
   return (
     <div className="w-screen h-screen bg-slate-400 flex flex-col items-center justify-center ">
       <div className="z-[15] flex flex-col mb-10  lg:mb-44 gap-20 items-center justify-center">
-        <img
-          src="/WhiteLapiscoLogo.svg"
-          alt=""
-          className={` w-[170px] md:w-[250px] select-none `}
-        />
+        <div className="overflow-hidden">
+          <m.img
+            animate={{ y: 0 }}
+            initial={{ y: "100%" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            src="/WhiteLapiscoLogo.svg"
+            alt=""
+            className={` w-[170px] md:w-[250px] select-none `}
+          />
+        </div>
+
         <form
           action=""
           className=" flex flex-col gap-10 items-center justify-center"
@@ -56,10 +63,11 @@ const Login = () => {
       </div>
 
       <div className=" absolute w-screen h-screen  bg-black bg-opacity-[0.85] z-10"></div>
-      <img
+      <m.img
+        initial={{}}
         src="/WalppaperLoginTransformed.png"
         alt=""
-        className={`absolute w-[640px] h-screen sm:w-[768px] sm:h-screen md:w-[1024px] object-cover md:h-screen lg:w-screen lg:h-screen z-0 transition-all duration-500 ${
+        className={`absolute  object-cover h-screen w-[2000px]  z-0 transition-all duration-500 ${
           blur ? "blur-lg" : "blur-0"
         }`}
       />
