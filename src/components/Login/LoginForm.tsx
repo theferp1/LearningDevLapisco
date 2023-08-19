@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { BlurContext } from "../../provider/BlurContext";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion as m } from "framer-motion";

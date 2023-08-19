@@ -6,12 +6,13 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="">
-      <Routes>
-        <BlurProvider>
+      <BlurProvider>
+        <Routes>
           <Route path="/" element={<Login />} />
-        </BlurProvider>
-        <Route path="/cadastrar" element={<SignUp />} />
-      </Routes>
+
+          <Route path="/cadastrar" element={<SignUp />} />
+        </Routes>
+      </BlurProvider>
     </div>
   );
 }
