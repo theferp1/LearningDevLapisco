@@ -1,21 +1,19 @@
-import Input from "./Input";
-import Button from "./Button";
+import { useContext } from "react";
+import { BlurContext } from "../../provider/BlurContext";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion as m } from "framer-motion";
 import { container } from "../../animations/login";
+import Input from "./Input";
+import Button from "./Button";
 
 interface LoginFormData {
   CPF: string;
   Senha: string;
 }
 
-interface LoginForm {
-  blur: boolean;
-  setBlur: (boolean: boolean) => void;
-}
-
-const LoginForm = (props: LoginForm) => {
+const LoginForm = () => {
   const { register, handleSubmit } = useForm<LoginFormData>();
+  const { setBlur } = useContext(BlurContext);
 
   const onSubmit: SubmitHandler<LoginFormData> = (data) => {
     console.log(data);
@@ -27,36 +25,31 @@ const LoginForm = (props: LoginForm) => {
       initial="hidden"
       animate="show"
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col items-center justify-center gap-10"
+      className="flex flex-col items-center justify-center gap-10 w-fit"
     >
-      <input
-        onBlur={() => {
-          console.log("saiu");
-        }}
-        onFocus={() => {
-          console.log("entrou");
-        }}
-        type="text"
-      />
       <Input
         type="text"
         placeholder="CPF"
         register={register("CPF", { required: "CPF is required" })}
         onFocus={() => {
-          console.log("ENTROU");
-          props.setBlur(true);
+          setBlur(true);
         }}
         onBlur={() => {
-          console.log("SAIU");
+          setBlur(false);
         }}
       />
-      <span className="text-5xl text-white">{`${props.blur}`}</span>
       <Input
         type="password"
-        placeholder="password"
+        placeholder="Senha"
+        onFocus={() => {
+          setBlur(true);
+        }}
+        onBlur={() => {
+          setBlur(false);
+        }}
         register={register("Senha", { required: "Password is required" })}
       />
-      <Button type="submit" />
+      <Button type="submit" text="Entrar" />
     </m.form>
   );
 };
