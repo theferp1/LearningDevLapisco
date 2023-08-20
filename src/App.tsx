@@ -8,9 +8,9 @@ function App() {
     <div className="">
       <BlurProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
 
-          <Route path="/cadastrar" element={<SignUp />} />
+          <Route path="/" element={<SignUp />} />
         </Routes>
       </BlurProvider>
     </div>
